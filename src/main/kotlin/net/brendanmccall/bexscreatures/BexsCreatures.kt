@@ -1,6 +1,7 @@
 package net.brendanmccall.bexscreatures
 
 import net.brendanmccall.bexscreatures.entity.ModEntities
+import net.brendanmccall.bexscreatures.entity.ModEntitySpawns
 import net.brendanmccall.bexscreatures.item.ModItemGroups
 import net.brendanmccall.bexscreatures.item.ModItems
 import net.fabricmc.api.EnvType
@@ -25,5 +26,6 @@ object BexsCreatures : ModInitializer {
 		ModItemGroups.registerModItemGroups()
 		ModItems.registerModItems()
 		ModEntities.registerModEntities()
+		ModEntitySpawns.registerModEntitySpawns()
 	}
 }
