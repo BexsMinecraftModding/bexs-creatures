@@ -1,15 +1,29 @@
 package net.brendanmccall.bexscreatures
 
+import net.brendanmccall.bexscreatures.entity.ModEntities
+import net.brendanmccall.bexscreatures.item.ModItemGroups
+import net.brendanmccall.bexscreatures.item.ModItems
+import net.fabricmc.api.EnvType
 import net.fabricmc.api.ModInitializer
+import net.fabricmc.loader.api.FabricLoader
 import org.slf4j.LoggerFactory
 
 object BexsCreatures : ModInitializer {
-    private val logger = LoggerFactory.getLogger("bexscreatures")
+
+	val modId = "bexscreatures"
+    val logger = LoggerFactory.getLogger(modId)
 
 	override fun onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-		logger.info("Hello Fabric world!")
+		logger.info("Loading Bex's Creatures...")
+
+		// Only render on the client
+		if (FabricLoader.getInstance().environmentType == EnvType.CLIENT) {
+			BexsCreaturesClient.onInitializeClient()
+		}
+
+		// Registries
+		ModItemGroups.registerModItemGroups()
+		ModItems.registerModItems()
+		ModEntities.registerModEntities()
 	}
 }
