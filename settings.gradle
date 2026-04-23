@@ -9,5 +9,5 @@ pluginManagement {
 	}
 }
 
-// Should match your MOD_ID
+// Should match your modid
 rootProject.name = 'bexscreatures'

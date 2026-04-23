@@ -37,9 +37,9 @@ object ModEntitySpawns {
                 BiomeKeys.SAVANNA, BiomeKeys.SAVANNA_PLATEAU, BiomeKeys.WINDSWEPT_SAVANNA, BiomeKeys.WOODED_BADLANDS),
             SpawnGroup.CREATURE,
             ModEntities.DEER,
-            12, // Spawn weight (higher = more frequent)
-            4,  // Minimum group size
-            4   // Maximum group size
+            12,
+            4,
+            4
         )
     }
 }
