@@ -11,7 +11,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry
 object BexsCreaturesClient : ClientModInitializer {
 
     override fun onInitializeClient() {
-        EntityModelLayerRegistry.registerModelLayer(ModModelLayers.deer) { DeerModel.getTexturedModelData() }
-        EntityRendererRegistry.register(ModEntities.deer) { context -> DeerRenderer(context) }
+        EntityModelLayerRegistry.registerModelLayer(ModModelLayers.DEER) { DeerModel.getTexturedModelData() }
+        EntityRendererRegistry.register(ModEntities.DEER) { context -> DeerRenderer(context) }
     }
 }

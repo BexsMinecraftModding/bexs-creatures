@@ -16,22 +16,22 @@ class ModEnglishLangProvider(
         translationBuilder: TranslationBuilder?
     ) {
         // Creative mode tab
-        translationBuilder?.add("itemgroup.${BexsCreatures.modId}", "Bex's Creatures")
+        translationBuilder?.add("itemgroup.${BexsCreatures.MOD_ID}", "Bex's Creatures")
         // Spawn egg
-        translationBuilder?.add("item.${BexsCreatures.modId}.deer_spawn_egg", "Deer Spawn Egg")
+        translationBuilder?.add("item.${BexsCreatures.MOD_ID}.deer_spawn_egg", "Deer Spawn Egg")
 
         // Load the language file
         val existingFilePath = dataGenerator.modContainer
-            .findPath("assets/${BexsCreatures.modId}/lang/en_us.existing.json")
+            .findPath("assets/${BexsCreatures.MOD_ID}/lang/en_us.existing.json")
 
         if (existingFilePath.isPresent) {
             try {
                 translationBuilder?.add(existingFilePath.get())
             } catch (e: Exception) {
-                BexsCreatures.logger.warn("Failed to add existing language file: ${e.message}")
+                BexsCreatures.LOGGER.warn("Failed to add existing language file: ${e.message}")
             }
         } else {
-            BexsCreatures.logger.info("No existing language file found. Skipping.")
+            BexsCreatures.LOGGER.info("No existing language file found. Skipping.")
         }
     }
 }

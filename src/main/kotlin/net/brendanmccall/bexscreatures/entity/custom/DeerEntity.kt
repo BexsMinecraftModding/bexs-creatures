@@ -62,7 +62,7 @@ class DeerEntity(entityType: EntityType<out AnimalEntity>, world: World) : Anima
     }
 
     override fun createChild(world: ServerWorld, entity: PassiveEntity): PassiveEntity? {
-        return ModEntities.deer.create(world)
+        return ModEntities.DEER.create(world)
     }
 
     override fun getAmbientSound(): SoundEvent? = ModSounds.DEER_IDLE

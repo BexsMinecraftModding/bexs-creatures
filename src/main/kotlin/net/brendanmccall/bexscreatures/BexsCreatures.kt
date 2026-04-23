@@ -12,11 +12,11 @@ import org.slf4j.LoggerFactory
 
 object BexsCreatures : ModInitializer {
 
-	val modId = "bexscreatures"
-    val logger = LoggerFactory.getLogger(modId)
+	val MOD_ID = "bexscreatures"
+    val LOGGER = LoggerFactory.getLogger(MOD_ID)
 
 	override fun onInitialize() {
-		logger.info("Loading Bex's Creatures...")
+		LOGGER.info("Loading Bex's Creatures...")
 
 		// Only render on the client
 		if (FabricLoader.getInstance().environmentType == EnvType.CLIENT) {

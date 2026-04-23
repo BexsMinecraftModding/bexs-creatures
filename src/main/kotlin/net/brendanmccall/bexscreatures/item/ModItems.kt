@@ -11,17 +11,17 @@ import net.minecraft.util.Identifier
 object ModItems {
 
     fun registerModItems() {
-        BexsCreatures.logger.info("Registering mod items for ${BexsCreatures.modId}")
+        BexsCreatures.LOGGER.info("Registering mod items for ${BexsCreatures.MOD_ID}")
     }
 
     private fun registerItem(name: String, item: Item): Item {
         return Registry.register(Registries.ITEM,
-            Identifier.of(BexsCreatures.modId, name), item)
+            Identifier.of(BexsCreatures.MOD_ID, name), item)
     }
 
     val deerSpawnEgg: Item = registerItem("deer_spawn_egg",
         SpawnEggItem(
-            ModEntities.deer,
+            ModEntities.DEER,
             0x9F7444, 0xC1C1C1, Item.Settings()
         )
     )

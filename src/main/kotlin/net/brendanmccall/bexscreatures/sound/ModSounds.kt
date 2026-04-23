@@ -9,11 +9,11 @@ import net.minecraft.util.Identifier
 object ModSounds {
 
     fun registerSounds() {
-        BexsCreatures.logger.info("Registering mod sounds for ${BexsCreatures.modId}")
+        BexsCreatures.LOGGER.info("Registering mod sounds for ${BexsCreatures.MOD_ID}")
     }
 
     private fun registerSoundEvent(name: String?): SoundEvent {
-        val id: Identifier? = Identifier.of(BexsCreatures.modId, name)
+        val id: Identifier? = Identifier.of(BexsCreatures.MOD_ID, name)
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id))
     }
 

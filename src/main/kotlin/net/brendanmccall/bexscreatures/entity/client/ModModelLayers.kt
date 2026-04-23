@@ -7,7 +7,7 @@ import net.minecraft.util.Identifier
 class ModModelLayers {
 
     companion object{
-        val deer: EntityModelLayer = EntityModelLayer(Identifier.of(
-            BexsCreatures.modId, "deer"), "main")
+        val DEER: EntityModelLayer = EntityModelLayer(Identifier.of(
+            BexsCreatures.MOD_ID, "deer"), "main")
     }
 }

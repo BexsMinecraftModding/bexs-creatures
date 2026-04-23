@@ -11,12 +11,12 @@ import net.minecraft.util.Identifier
 class DeerRenderer(context: EntityRendererFactory.Context) :
     MobEntityRenderer<DeerEntity, DeerModel<DeerEntity>>(
         context,
-        DeerModel(context.getPart(ModModelLayers.deer)),
+        DeerModel(context.getPart(ModModelLayers.DEER)),
         0.5f
     ) {
 
     companion object {
-        private val texture = Identifier.of(BexsCreatures.modId, "textures/entity/deer.png")
+        private val texture = Identifier.of(BexsCreatures.MOD_ID, "textures/entity/deer.png")
     }
 
     override fun getTexture(entity: DeerEntity): Identifier {

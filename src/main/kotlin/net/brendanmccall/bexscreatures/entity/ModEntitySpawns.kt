@@ -13,14 +13,14 @@ import net.minecraft.world.biome.BiomeKeys
 object ModEntitySpawns {
 
     fun registerModEntitySpawns() {
-        BexsCreatures.logger.info("Registering mod entity spawns for ${BexsCreatures.modId}")
+        BexsCreatures.LOGGER.info("Registering mod entity spawns for ${BexsCreatures.MOD_ID}")
 
         registerDeerSpawns()
     }
 
     fun registerDeerSpawns() {
         SpawnRestriction.register(
-            ModEntities.deer,
+            ModEntities.DEER,
             SpawnLocationTypes.ON_GROUND,
             Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
             DeerEntity::canSpawn
@@ -36,7 +36,7 @@ object ModEntitySpawns {
                 BiomeKeys.BAMBOO_JUNGLE, BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS, BiomeKeys.SNOWY_PLAINS,
                 BiomeKeys.SAVANNA, BiomeKeys.SAVANNA_PLATEAU, BiomeKeys.WINDSWEPT_SAVANNA, BiomeKeys.WOODED_BADLANDS),
             SpawnGroup.CREATURE,
-            ModEntities.deer,
+            ModEntities.DEER,
             12, // Spawn weight (higher = more frequent)
             4,  // Minimum group size
             4   // Maximum group size

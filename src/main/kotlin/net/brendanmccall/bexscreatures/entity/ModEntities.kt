@@ -12,14 +12,14 @@ import net.minecraft.util.Identifier
 object ModEntities {
 
     fun registerModEntities() {
-        BexsCreatures.logger.info("Registering mod entities for ${BexsCreatures.modId}")
+        BexsCreatures.LOGGER.info("Registering mod entities for ${BexsCreatures.MOD_ID}")
 
-        FabricDefaultAttributeRegistry.register(deer, DeerEntity.createDeerAttributes())
+        FabricDefaultAttributeRegistry.register(DEER, DeerEntity.createDeerAttributes())
     }
 
-    val deer: EntityType<DeerEntity> = Registry.register(
+    val DEER: EntityType<DeerEntity> = Registry.register(
         Registries.ENTITY_TYPE,
-        Identifier.of(BexsCreatures.modId, "deer"),
+        Identifier.of(BexsCreatures.MOD_ID, "deer"),
         EntityType.Builder.create(::DeerEntity, SpawnGroup.CREATURE)
             .dimensions(0.8f, 2.0f).build())
 }
