@@ -1,6 +1,7 @@
 package net.brendanmccall.bexscreatures.entity.custom
 
 import net.brendanmccall.bexscreatures.entity.ModEntities
+import net.brendanmccall.bexscreatures.sound.ModSounds
 import net.minecraft.block.Blocks
 import net.minecraft.entity.EntityType
 import net.minecraft.entity.SpawnReason
@@ -16,7 +17,6 @@ import net.minecraft.item.Items
 import net.minecraft.recipe.Ingredient
 import net.minecraft.server.world.ServerWorld
 import net.minecraft.sound.SoundEvent
-import net.minecraft.sound.SoundEvents
 import net.minecraft.util.math.BlockPos
 import net.minecraft.util.math.random.Random
 import net.minecraft.world.ServerWorldAccess
@@ -65,17 +65,11 @@ class DeerEntity(entityType: EntityType<out AnimalEntity>, world: World) : Anima
         return ModEntities.deer.create(world)
     }
 
-    override fun getAmbientSound(): SoundEvent? { // TODO: CHANGE LATER
-        return SoundEvents.ENTITY_FOX_AMBIENT
-    }
+    override fun getAmbientSound(): SoundEvent? = ModSounds.DEER_IDLE
 
-    override fun getHurtSound(source: DamageSource): SoundEvent? { // TODO: CHANGE LATER
-        return SoundEvents.ENTITY_GENERIC_HURT
-    }
+    override fun getHurtSound(source: DamageSource): SoundEvent? = ModSounds.DEER_HURT
 
-    override fun getDeathSound(): SoundEvent? { // TODO: CHANGE LATER
-        return SoundEvents.ENTITY_GENERIC_DEATH
-    }
+    override fun getDeathSound(): SoundEvent? = ModSounds.DEER_DEATH
 
     companion object {
         fun createDeerAttributes(): DefaultAttributeContainer.Builder {

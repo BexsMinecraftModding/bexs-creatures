@@ -1,0 +1,24 @@
+{
+  "deer_idle": {
+    "sounds": [
+      "bexscreatures:deer_idle1",
+      "bexscreatures:deer_idle2",
+      "bexscreatures:deer_idle3",
+      "bexscreatures:deer_idle4"
+    ]
+  },
+  "deer_hurt": {
+    "sounds": [
+      "bexscreatures:deer_hurt1",
+      "bexscreatures:deer_hurt2",
+      "bexscreatures:deer_hurt3",
+      "bexscreatures:deer_hurt4"
+    ]
+  },
+  "deer_death": {
+    "sounds": [
+      "bexscreatures:deer_death1",
+      "bexscreatures:deer_death2"
+    ]
+  }
+}

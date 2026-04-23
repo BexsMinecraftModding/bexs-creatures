@@ -4,6 +4,7 @@ import net.brendanmccall.bexscreatures.entity.ModEntities
 import net.brendanmccall.bexscreatures.entity.ModEntitySpawns
 import net.brendanmccall.bexscreatures.item.ModItemGroups
 import net.brendanmccall.bexscreatures.item.ModItems
+import net.brendanmccall.bexscreatures.sound.ModSounds
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.loader.api.FabricLoader
@@ -24,6 +25,7 @@ object BexsCreatures : ModInitializer {
 
 		// Registries
 		ModItemGroups.registerModItemGroups()
+		ModSounds.registerSounds()
 		ModItems.registerModItems()
 		ModEntities.registerModEntities()
 		ModEntitySpawns.registerModEntitySpawns()
